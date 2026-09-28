@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightwalker Hub — Gaming • Streaming • Content</title>
+  <meta name="description" content="کمدین، گیمر، استریمر فارسی‌زبان — یوتیوب، کیک و بیشتر">
+  <meta property="og:title" content="Nightwalker Hub">
+  <meta property="og:description" content="کمدین، گیمر، استریمر | Official Razer Content Creator">
+  <meta property="og:type" content="website">
+    <meta name="theme-color" content="#08080f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="page">
+
+    <!-- Profile Header -->
+    <header class="profile">
+      <div class="avatar-wrap">
+        <img src="assets/images/profile.jpg" alt="عکس پروفایل Nightwalker — Rad Izadi" width="88" height="88">
+        <div class="live-dot" id="avatar-live-dot" aria-hidden="true"></div>
+      </div>
+
+      <h1 class="profile-name">Night<span>walker</span></h1>
+
+      <p class="profile-bio">کمدین، گیمر، استریمر فارسی‌زبان<br>موبایل، کنسول، کامپیوتر — فرقی نمیکنه</p>
+
+      <div class="razer-badge" aria-label="Official Razer Content Creator">
+        <svg viewBox="0 0 24 24" fill="#00e600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2zm-1 13l-3-3 1.41-1.41L11 12.17l5.59-5.58L18 8l-7 7z"/>
+        </svg>
+        Official Razer Content Creator
+      </div>
+    </header>
+
+    <!-- Live Status -->
+    <section class="live-card" id="live-card" aria-label="وضعیت استریم">
+      <div class="live-info">
+        <div class="live-indicator" id="live-indicator" aria-hidden="true"></div>
+        <div class="live-text-wrap">
+          <span class="live-label" id="live-label">OFFLINE</span>
+          <span class="live-status-text" id="live-status-text">فعلاً آفلاینم</span>
+        </div>
+      </div>
+      <a
+        href="https://kick.com/nightwalkerad"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="live-watch-btn"
+        id="live-watch-btn"
+        aria-label="تماشای استریم زنده"
+      >
+        ببین ▶
+      </a>
+    </section>
+
+    <!-- Latest Video -->
+    <p class="section-label" aria-label="آخرین ویدیو از یوتیوب">آخرین ویدیو</p>
+    <div id="video-container" aria-live="polite">
+      <div class="video-loading" aria-label="در حال بارگذاری ویدیو">در حال بارگذاری...</div>
+    </div>
+
+    <!-- Links -->
+    <p class="section-label">لینک‌ها</p>
+    <nav class="links-grid" aria-label="لینک‌های اصلی">
+
+      <a href="https://www.youtube.com/@nightwalker_farsi" target="_blank" rel="noopener noreferrer" class="link-btn" aria-label="کانال یوتیوب Nightwalker">
+        <div class="link-icon yt" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#ff0000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/>
+          </svg>
+        </div>
+        <span class="link-text">یوتیوب</span>
+        <span class="link-arrow" aria-hidden="true">←</span>
+      </a>
+
+      <a href="https://kick.com/nightwalkerad" target="_blank" rel="noopener noreferrer" class="link-btn" aria-label="کانال Kick استریم">
+        <div class="link-icon kick" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#53fc0c" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2h5v7l5-7h6L12 10l6 12H12L7 15v7H2V2z"/>
+          </svg>
+        </div>
+        <span class="link-text">Kick</span>
+        <span class="link-arrow" aria-hidden="true">←</span>
+      </a>
+
+      <a href="https://telelivee.ir/Nightwalker" target="_blank" rel="noopener noreferrer" class="link-btn" aria-label="کانال تلویزیون">
+        <div class="link-icon tv" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#6495ff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/>
+          </svg>
+        </div>
+        <span class="link-text">Telelivee</span>
+        <span class="link-arrow" aria-hidden="true">←</span>
+      </a>
+
+      <a href="about.html" class="link-btn" aria-label="درباره Nightwalker">
+        <div class="link-icon about" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#b478ff" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8V21.6h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </div>
+        <span class="link-text">درباره من</span>
+        <span class="link-arrow" aria-hidden="true">←</span>
+      </a>
+
+      <a href="support.html" class="link-btn" aria-label="حمایت از Nightwalker">
+        <div class="link-icon support" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#ff5078" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <span class="link-text">حمایت</span>
+        <span class="link-arrow" aria-hidden="true">←</span>
+      </a>
+
+    </nav>
+
+    <footer class="footer">
+      <p>© ۲۰۲۶ Nightwalker — All rights reserved</p>
+    </footer>
+
+  </main>
+
+  <!-- Notification Modal -->
+  <div class="notif-overlay" id="notif-overlay" role="dialog" aria-modal="true" aria-labelledby="notif-title">
+    <div class="notif-modal">
+      <div class="notif-icon" aria-hidden="true">🔔</div>
+      <h2 class="notif-title" id="notif-title">Nightwalker Hub</h2>
+      <p class="notif-desc">میخوای وقتی این صفحه بازه، با لایو شدنم بهت خبر بدم؟</p>
+      <div class="notif-actions">
+        <button class="btn-yes" id="notif-yes">آره، خبرم کن</button>
+        <button class="btn-no"  id="notif-no">نه ممنون</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
