@@ -1,20 +1,51 @@
 # Nightwalker Hub
 
-Static website for GitHub Pages.
+**Status: published static-site prototype · integration reliability not independently verified**
 
-## Deploy on GitHub Pages
+[Live demo](https://cianium.github.io/Nightwalker-/) · [Source](https://github.com/cianium/Nightwalker-)
 
-1. Upload all files in this folder to the root of a GitHub repository.
-2. Keep `index.html` in the repository root.
-3. In **Settings → Pages**, choose **Deploy from a branch**.
-4. Select the branch (usually `main`) and folder `/ (root)`.
-5. Open the generated GitHub Pages URL.
+A responsive, streaming-oriented personal hub with sections for creator details, support, YouTube updates and Kick live status. Built in HTML, CSS and vanilla JavaScript; no server-side application is included.
 
-## Runtime notes
+## Features
 
-- The site is fully static and needs no build step.
-- Kick live status uses a public CORS proxy to reach Kick's endpoint from the browser.
-- Latest YouTube video uses `rss2json` as a browser-readable RSS bridge.
-- Browser notifications work while the page is open and the visitor has granted notification permission. A true background push system would require a push service/backend.
-# Nightwalker-
-# Nightwalker-
+- Responsive homepage, about and support pages
+- Live status integration for Kick through a browser-accessible CORS proxy
+- Latest YouTube update through an RSS-to-JSON bridge
+- Optional browser notifications **while the page is open and permission is granted**
+
+External providers and publicly available proxies can change or fail. This repository does **not** implement reliable background push notifications, a private API or a guaranteed realtime event pipeline.
+
+## Structure
+
+```text
+index.html      Home
+about.html      About
+support.html    Support
+main.js         Browser interactions/integrations
+style.css       Responsive styling
+assets/         Local media
+```
+
+## Run locally
+
+```bash
+python3 -m http.server 8080
+```
+
+Visit `http://localhost:8080`.
+
+## Deploy
+
+GitHub Pages can serve the root of branch `main`. See the repository **Settings → Pages** to confirm the publication source. For any custom domain, verify HTTPS and the exact deployed revision.
+
+## Before calling it production-ready
+
+- Test CORS, API response validation and fallback when Kick/YouTube bridge endpoints fail.
+- Review third-party proxy privacy and rate limits.
+- Run mobile keyboard/accessibility and browser checks.
+- Add automated tests and an explicit deployment workflow.
+- Document all external assets and their licenses.
+
+## License
+
+No project-wide license is currently declared; check permission before reuse.
